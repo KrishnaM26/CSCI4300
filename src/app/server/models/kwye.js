@@ -3,11 +3,10 @@ const mongoose = require('mongoose');
 const kwyeSchema = new mongoose.Schema(
 
     {
-        users:{
-           id:Number,
-           username:String,
-           password:String
-        },
+      users: {
+        username: String,
+        password: String,
+      },
         mealplans:[
            {
               id:Number,

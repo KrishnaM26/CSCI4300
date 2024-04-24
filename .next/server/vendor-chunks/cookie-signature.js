@@ -1,0 +1,24 @@
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+exports.id = "vendor-chunks/cookie-signature";
+exports.ids = ["vendor-chunks/cookie-signature"];
+exports.modules = {
+
+/***/ "(ssr)/./node_modules/cookie-signature/index.js":
+/*!************************************************!*\
+  !*** ./node_modules/cookie-signature/index.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+eval("/**\n * Module dependencies.\n */\n\nvar crypto = __webpack_require__(/*! crypto */ \"crypto\");\n\n/**\n * Sign the given `val` with `secret`.\n *\n * @param {String} val\n * @param {String} secret\n * @return {String}\n * @api private\n */\n\nexports.sign = function(val, secret){\n  if ('string' != typeof val) throw new TypeError(\"Cookie value must be provided as a string.\");\n  if ('string' != typeof secret) throw new TypeError(\"Secret string must be provided.\");\n  return val + '.' + crypto\n    .createHmac('sha256', secret)\n    .update(val)\n    .digest('base64')\n    .replace(/\\=+$/, '');\n};\n\n/**\n * Unsign and decode the given `val` with `secret`,\n * returning `false` if the signature is invalid.\n *\n * @param {String} val\n * @param {String} secret\n * @return {String|Boolean}\n * @api private\n */\n\nexports.unsign = function(val, secret){\n  if ('string' != typeof val) throw new TypeError(\"Signed cookie string must be provided.\");\n  if ('string' != typeof secret) throw new TypeError(\"Secret string must be provided.\");\n  var str = val.slice(0, val.lastIndexOf('.'))\n    , mac = exports.sign(str, secret);\n  \n  return sha1(mac) == sha1(val) ? str : false;\n};\n\n/**\n * Private\n */\n\nfunction sha1(str){\n  return crypto.createHash('sha1').update(str).digest('hex');\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHNzcikvLi9ub2RlX21vZHVsZXMvY29va2llLXNpZ25hdHVyZS9pbmRleC5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7O0FBRUEsYUFBYSxtQkFBTyxDQUFDLHNCQUFROztBQUU3QjtBQUNBO0FBQ0E7QUFDQSxXQUFXLFFBQVE7QUFDbkIsV0FBVyxRQUFRO0FBQ25CLFlBQVk7QUFDWjtBQUNBOztBQUVBLFlBQVk7QUFDWjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsV0FBVyxRQUFRO0FBQ25CLFdBQVcsUUFBUTtBQUNuQixZQUFZO0FBQ1o7QUFDQTs7QUFFQSxjQUFjO0FBQ2Q7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQSIsInNvdXJjZXMiOlsid2VicGFjazovL2tub3ctd2hhdC15b3UtZWF0Ly4vbm9kZV9tb2R1bGVzL2Nvb2tpZS1zaWduYXR1cmUvaW5kZXguanM/MDNlMyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIE1vZHVsZSBkZXBlbmRlbmNpZXMuXG4gKi9cblxudmFyIGNyeXB0byA9IHJlcXVpcmUoJ2NyeXB0bycpO1xuXG4vKipcbiAqIFNpZ24gdGhlIGdpdmVuIGB2YWxgIHdpdGggYHNlY3JldGAuXG4gKlxuICogQHBhcmFtIHtTdHJpbmd9IHZhbFxuICogQHBhcmFtIHtTdHJpbmd9IHNlY3JldFxuICogQHJldHVybiB7U3RyaW5nfVxuICogQGFwaSBwcml2YXRlXG4gKi9cblxuZXhwb3J0cy5zaWduID0gZnVuY3Rpb24odmFsLCBzZWNyZXQpe1xuICBpZiAoJ3N0cmluZycgIT0gdHlwZW9mIHZhbCkgdGhyb3cgbmV3IFR5cGVFcnJvcihcIkNvb2tpZSB2YWx1ZSBtdXN0IGJlIHByb3ZpZGVkIGFzIGEgc3RyaW5nLlwiKTtcbiAgaWYgKCdzdHJpbmcnICE9IHR5cGVvZiBzZWNyZXQpIHRocm93IG5ldyBUeXBlRXJyb3IoXCJTZWNyZXQgc3RyaW5nIG11c3QgYmUgcHJvdmlkZWQuXCIpO1xuICByZXR1cm4gdmFsICsgJy4nICsgY3J5cHRvXG4gICAgLmNyZWF0ZUhtYWMoJ3NoYTI1NicsIHNlY3JldClcbiAgICAudXBkYXRlKHZhbClcbiAgICAuZGlnZXN0KCdiYXNlNjQnKVxuICAgIC5yZXBsYWNlKC9cXD0rJC8sICcnKTtcbn07XG5cbi8qKlxuICogVW5zaWduIGFuZCBkZWNvZGUgdGhlIGdpdmVuIGB2YWxgIHdpdGggYHNlY3JldGAsXG4gKiByZXR1cm5pbmcgYGZhbHNlYCBpZiB0aGUgc2lnbmF0dXJlIGlzIGludmFsaWQuXG4gKlxuICogQHBhcmFtIHtTdHJpbmd9IHZhbFxuICogQHBhcmFtIHtTdHJpbmd9IHNlY3JldFxuICogQHJldHVybiB7U3RyaW5nfEJvb2xlYW59XG4gKiBAYXBpIHByaXZhdGVcbiAqL1xuXG5leHBvcnRzLnVuc2lnbiA9IGZ1bmN0aW9uKHZhbCwgc2VjcmV0KXtcbiAgaWYgKCdzdHJpbmcnICE9IHR5cGVvZiB2YWwpIHRocm93IG5ldyBUeXBlRXJyb3IoXCJTaWduZWQgY29va2llIHN0cmluZyBtdXN0IGJlIHByb3ZpZGVkLlwiKTtcbiAgaWYgKCdzdHJpbmcnICE9IHR5cGVvZiBzZWNyZXQpIHRocm93IG5ldyBUeXBlRXJyb3IoXCJTZWNyZXQgc3RyaW5nIG11c3QgYmUgcHJvdmlkZWQuXCIpO1xuICB2YXIgc3RyID0gdmFsLnNsaWNlKDAsIHZhbC5sYXN0SW5kZXhPZignLicpKVxuICAgICwgbWFjID0gZXhwb3J0cy5zaWduKHN0ciwgc2VjcmV0KTtcbiAgXG4gIHJldHVybiBzaGExKG1hYykgPT0gc2hhMSh2YWwpID8gc3RyIDogZmFsc2U7XG59O1xuXG4vKipcbiAqIFByaXZhdGVcbiAqL1xuXG5mdW5jdGlvbiBzaGExKHN0cil7XG4gIHJldHVybiBjcnlwdG8uY3JlYXRlSGFzaCgnc2hhMScpLnVwZGF0ZShzdHIpLmRpZ2VzdCgnaGV4Jyk7XG59XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(ssr)/./node_modules/cookie-signature/index.js\n");
+
+/***/ })
+
+};
+;
