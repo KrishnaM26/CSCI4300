@@ -61,6 +61,7 @@ const Register = () => {
     }
 
     const usrs = {users: {username: user, password: pwd}};
+
     axios
     .post('http://localhost:8085/api/kwye', usrs)
     .then((res) => {
@@ -73,6 +74,7 @@ const Register = () => {
           "Account created! Do you want to proceed to the home page?"
         );
           window.location.href = "/";
+
     });
 
 };

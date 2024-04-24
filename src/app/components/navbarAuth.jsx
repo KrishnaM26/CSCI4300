@@ -12,7 +12,7 @@ const NavbarAuth = () => {
             <h1>Know What You Eat</h1>
         </div>
         <div className="Header-Container-Right">
-            <p>Welcome, John Doe</p>
+            <p>Welcome!</p>
            
                 <Link href='/'> <button>Log Out </button></Link>
            

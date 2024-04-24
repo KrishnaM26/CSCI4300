@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/items.css';
+import Link from 'next/link';
 
 const Meals =(props) => {
     return (    
@@ -9,8 +10,8 @@ const Meals =(props) => {
         <li key={props.id}>
              <h2>{props.title}</h2>
              <img src={props.img} className="meal-img" alt= "meal image" />
-       
-            <button>View</button>
+
+            <Link href = "/welcome/demo" ><button>view</button></Link>
         </li>
     </div>
 

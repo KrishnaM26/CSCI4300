@@ -210,7 +210,7 @@ form {
   height: 20rem;
 }
 
-.li{
+.meal-item li{
   display: flex;
   flex-direction: column;
   background-color: #52329c68;
@@ -223,7 +223,7 @@ form {
   list-style: none;
 }
 
-h2{
+.meal-item h2{
     color: black;
     margin: 3px;
     text-align: center;
@@ -248,10 +248,10 @@ h2{
   font-size: 20px;
 }
 
-button{
+.meal-item button{
   width: 4rem;
-  height: inherit;
-  margin: 1rem auto;
+  height: 2rem;
+  margin: 1rem 7rem;
   background-color:white ;
   border: black solid;
   border-radius: 50px;

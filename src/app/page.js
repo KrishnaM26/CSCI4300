@@ -2,12 +2,14 @@
 
 import React from "react";
 import NavbarUnauth from "./components/navbarUnauth.jsx";
+import { AuthProvider } from "@/context/AuthProvider.js";
 
 import './styles/home-unauth.css'
 
 export default function() {
   return (
     <div>
+     
       <NavbarUnauth />
       <div className="flex-container">
         <div className="flex-container-right">
@@ -21,6 +23,7 @@ export default function() {
         </div>
         
       </div>
+    
     </div>
 
   );
